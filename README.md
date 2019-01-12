@@ -3,5 +3,5 @@
 - In place O(1) space complexity
 
 ## Question 2: 
-Get the median from a stream of numbers at any time. The median is middle value of numbers. If the count of numbers is even, the median is defined as the average value of the two numbers in middle.
+- Get the median from a stream of numbers at any time. The median is middle value of numbers. If the count of numbers is even, the median is defined as the average value of the two numbers in middle.
 
