@@ -17,8 +17,7 @@ void juggle(vector<int>& input, int num, int current, int org, int rotateNum) {
 
 void rotate(vector<int>& input, int rotateNum) {
     for(int i = 0 ;  i < rotateNum; i++) {
-        int num = input[i];
-        juggle(input, num, i, i, rotateNum);
+        juggle(input, input[i], i, i, rotateNum);
     }
 }
 
