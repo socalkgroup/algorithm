@@ -13,3 +13,4 @@ Output : jg jh ji kg kh ki lg lh li
 Input  : number[] = { 0, 9, 5} 
 Output : wj wk wl xj xk xl yj yk yl zj zk zl
 ```
+
