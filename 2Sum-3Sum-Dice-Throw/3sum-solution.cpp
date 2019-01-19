@@ -1,68 +1,64 @@
 #include <vector>
 #include <map>
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 class Solution {
-private:
-    void sort3(int arr[]) 
-    { 
-        // Insert arr[1] 
-        if (arr[1] < arr[0]) 
-        swap(arr[0], arr[1]); 
-    
-        // Insert arr[2] 
-        if (arr[2] < arr[1]) 
+    private:
+        void sort_three_elements(vector<int>& arr) 
         { 
-            swap(arr[1], arr[2]); 
-            if (arr[1] < arr[0]) 
-                swap(arr[1], arr[0]); 
-        } 
-    }
-
-public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
-
-        vector<vector<int>> result;
-        if (nums.size() < 3) {
-            return result;
+            if (arr[1] < arr[0]){
+                swap(arr[0], arr[1]);
+            } 
+        
+            if (arr[2] < arr[1]) 
+            { 
+                swap(arr[1], arr[2]); 
+                if (arr[1] < arr[0]) {
+                    swap(arr[1], arr[0]);
+                }
+            } 
         }
-        
-        sort(nums.begin(), nums.end());
-        map<vector<int>,int> result_map;
-        
-        for(int index = 0 ; index < nums.size() - 1; index++) {
-            if (index > 0 && nums[index] == nums[index-1]) {
-                continue;
+
+    public:
+        vector<vector<int>> threeSum(vector<int>& nums) {
+
+            vector<vector<int>> result;
+
+            if (nums.size() < 3) {
+                return result;
             }
             
-            map<int,int> temp_map;
-            
-            for(int iindex = index + 1; iindex < nums.size(); iindex++) {
-                int current = nums[index] + nums[iindex];
+            sort(nums.begin(), nums.end());
+            set<vector<int>> result_set;
 
-                if(temp_map.count(-current) == 1) {
-                    vector<int> answer = {nums[index], nums[iindex], temp_map[-current]};
-                    sort(answer.begin(), answer.end());
-                    
-                    
-                    if(result_map.count(answer) == 0) {
-                        result_map.insert(pair<vector<int>, int>(answer, 1));
+            for(int i = 0 ; i < nums.size() - 1; i++) {
+
+                if (i > 0 && nums[i] == nums[i-1]) {
+                    continue;
+                }
+                
+                map<int,int> temp_map;
+                
+                for(int ii = i + 1; ii < nums.size(); ii++) {
+                    int current = nums[i] + nums[ii];
+
+                    if(temp_map.count(-current) == 1) {
+                        vector<int> answer = {nums[i], nums[ii], temp_map[-current]};
+                        sort_three_elements(answer);
+                        result_set.insert(answer);
+                    }
+                    else {
+                        temp_map.insert(pair<int,int>(nums[ii], nums[ii]));
                     }
                 }
-                else {
-                    temp_map.insert(pair<int,int>(nums[iindex], nums[iindex]));
-                }
+            }
+
+            vector<vector<int>> output(result_set.begin(), result_set.end());         
+            return output;
         }
-    }
-    
-    for(auto itor = result_map.begin(); itor != result_map.end(); itor++) {
-        result.push_back((*itor).first);
-    }
-    
-    return result;
-    }
 };
 
 int main(int argc, char const *argv[])
