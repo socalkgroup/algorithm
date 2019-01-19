@@ -2,6 +2,8 @@
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you many not use the same element twice
 
+https://leetcode.com/problems/two-sum
+
 ## Example
 ```
 Given nums = [2,7, 11, 15], target = 9
@@ -14,6 +16,8 @@ Given an array nums of n integers, are there elements a, b, c in nums such that 
 
 ## Note
 The solution set must not contain duplicate triplets.
+
+https://leetcode.com/problems/3sum
 
 ## Example
 ```
