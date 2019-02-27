@@ -11,6 +11,10 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0,1]
 ```
 
+### Things to consider
+* What if the same elements repeat? (e.g [3,3,5] target: 6)
+    * How to save the values in the original array of integers
+
 # Three Sum
 Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c0? Find all unique triplets in the array which gives the sum of zero.
 
