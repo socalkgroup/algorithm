@@ -1,7 +1,7 @@
 # Regular Expression Matching
 
-Reference: LeetCode
-Difficulty: Hard
+* Reference: LeetCode
+* Difficulty: Hard
 
 Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '\*'.
 
