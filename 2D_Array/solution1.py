@@ -9,8 +9,7 @@ class Solution:
         if not n or not m:
             return
 
-        tx = x + param[0]*(n-1)
-        ty = y + param[1]*(m-1)
+        tx,ty = x+param[0]*(n-1), y+param[1]*(m-1)
 
         ret = []
         if not param[0]:
