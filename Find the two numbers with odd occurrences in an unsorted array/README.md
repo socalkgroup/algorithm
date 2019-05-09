@@ -1,6 +1,6 @@
-#Find the two numbers with odd occurrences in an unsorted array
+# Find the two numbers with odd occurrences in an unsorted array
 
-* Given an unsorted array that contains even number of occurrences for all numbers except two numbers. Find the two numbers which have odd occurrences in O(n) time complexity and O(1) extra space.
+> Given an unsorted array that contains even number of occurrences for all numbers except two numbers. Find the two numbers which have odd occurrences in O(n) time complexity and O(1) extra space.
 
 ```
 Examples:
